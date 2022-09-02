@@ -1,2 +1,30 @@
-Modellizzare la struttura di una tabella per memorizzare tutti i dati riguardanti delle auto usate messe in vendita da un concessionario.
+Modellizzare la struttura di una tabella per memorizzare tutti i dati
+riguardanti delle auto usate messe in vendita da un concessionario.
 
+colonne       tipo dato       ATTRIBUTI                           INDICE
+
+codice_auto   BIGINT          UNIQUE, NOT NULL, AUTO INCREMENT    PRIMARY KEY
+marca         VARCHAR(50)     NOT NULL
+modello       VARCHAR(30)     NOT NULL
+serie         VARCHAR(20)     NULL
+tipo_auto     VARCHAR(50)     NOT NULL
+km_percorsi   MEDIUMINT       NOT NULL
+colore_out    VARCHAR(20)     NOT NULL
+colore_in     VARCHAR(20)     NOT NULL
+posti         TINYINT         NOT NULL
+porte         TINYINT         NOT NULL
+cerchi_auto   TINYINT         NOT NULL 
+peso          TINYINT         NOT NULL
+motore        VARCHAR(10)     DEFAULT: "BENZINA"
+consumo       VARCHAR(10)     NOTNULL
+cambio        VARCHAT(10)     DEFAULT: "MANUALE"
+cilindrata    TINYINT         NOT NULL
+cavalli       SMALLINT        NOT NULL
+velocità_max  TINYINT         NOT NULL
+accelerazione TINYINT         NOT NULL
+condizione    TINYINT(1)      DEFAULT: 0 ('USATO')
+proprietari   TINYINT         NOT NULL
+disponibile   TINYINT(1)      DEFAULT:'SI'
+noleggio      TINYINT(1)      DEFAULT:'SI'
+finanziamento TINYINT(1)      DEFAULT:'SI'
+prezzo        FLOAT(7,2)      NOT NULL
